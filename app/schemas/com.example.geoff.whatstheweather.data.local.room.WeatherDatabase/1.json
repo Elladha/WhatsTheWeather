@@ -1,0 +1,106 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "2b4bdd72677f93ebd2b36a8025ec6dbe",
+    "entities": [
+      {
+        "tableName": "current_weather",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `tempC` REAL NOT NULL, `tempF` REAL NOT NULL, `isDay` INTEGER NOT NULL, `windMph` REAL NOT NULL, `windKph` REAL NOT NULL, `windDir` TEXT NOT NULL, `precipMm` REAL NOT NULL, `precipIn` REAL NOT NULL, `feelslikeC` REAL NOT NULL, `feelslikeF` REAL NOT NULL, `visKm` REAL NOT NULL, `visMiles` REAL NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tempC",
+            "columnName": "tempC",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tempF",
+            "columnName": "tempF",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isDay",
+            "columnName": "isDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "windMph",
+            "columnName": "windMph",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "windKph",
+            "columnName": "windKph",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "windDir",
+            "columnName": "windDir",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precipMm",
+            "columnName": "precipMm",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precipIn",
+            "columnName": "precipIn",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "feelslikeC",
+            "columnName": "feelslikeC",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "feelslikeF",
+            "columnName": "feelslikeF",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "visKm",
+            "columnName": "visKm",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "visMiles",
+            "columnName": "visMiles",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '2b4bdd72677f93ebd2b36a8025ec6dbe')"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Localisation">
+        <SwitchPreference
+            android:key="DEVICE_LOCATION"
+            android:title="Utiliser le gps"
+            android:summary="Acceptez que l'application puisse accéder à votre localisation"
+            android:defaultValue="false"
+            android:disableDependentsState="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Unités">
+        <ListPreference
+            android:key="UNIT"
+            android:title="Unités de température"
+            android:summary="%s"
+            android:defaultValue="METRIC"
+            android:entries="@array/unit"
+            android:entryValues="@array/unitValues" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>
